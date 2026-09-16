@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anderson Steven Flores Pérez — Software Developer & Data Science Student</title>
+  <meta name="description"
+    content="Portafolio de Anderson Steven Flores Pérez, estudiante universitario de Ingeniería en Desarrollo de Software y Ciencia de Datos. Proyectos IoT, Full Stack y EdTech." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f46e5'/><text x='50' y='66' font-size='48' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>" />
+</head>
+
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="bg-aurora" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span
+      class="blob b3"></span>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">Anderson<em>.dev</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#formacion" class="nav-link">Formación</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li class="nav-cta-mobile"><a href="#contacto" class="btn btn-primary btn-sm">Contactar <i
+              class="fa-solid fa-arrow-right"></i></a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+          <span class="toggle-thumb"></span>
+        </button>
+        <a href="#contacto" class="btn btn-primary btn-sm nav-cta-desktop">Contactar <i
+            class="fa-solid fa-arrow-right"></i></a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="inicio">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="badge-availability reveal">
+            <span class="pulse-dot"></span>
+            Disponible para proyectos
+            <span class="badge-sep">·</span>
+            <span class="mono">Software Developer & Data Science Student</span>
+          </div>
+          <h1 class="hero-title reveal">Anderson Steven<br /><span class="gradient-text">Flores Pérez</span></h1>
+          <p class="hero-role reveal"><span class="mono prompt">&gt;_</span> <span id="typedRole"></span><span
+              class="caret">|</span></p>
+          <p class="hero-desc reveal">
+            Estudiante universitario de Ingeniería en Desarrollo de Software y Ciencia de Datos.
+            Construyo soluciones web, sistemas IoT y herramientas educativas: organizado, proactivo y con aprendizaje
+            rápido,
+            enfocado en aportar valor en entornos digitales y remotos.
+          </p>
+          <div class="hero-ctas reveal">
+            <a href="#proyectos" class="btn btn-primary">Ver Proyectos <i class="fa-solid fa-layer-group"></i></a>
+            <!-- PLACEHOLDER CV PDF: reemplaza href="#" por tu link de Google Drive (ej. https://drive.google.com/file/d/TU_ID/view) -->
+            <a href="#" id="cvButton" class="btn btn-ghost" data-placeholder="cv-pdf"><i
+                class="fa-solid fa-file-arrow-down"></i> Descargar CV</a>
+          </div>
+          <div class="hero-socials reveal">
+            <!-- PLACEHOLDER GitHub perfil: reemplaza href="#" por https://github.com/tu-usuario -->
+            <a href="#" data-placeholder="github-profile" aria-label="GitHub" class="social-btn"><i
+                class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anderson-steven-flores-perez-cv/" target="_blank" rel="noopener"
+              aria-label="LinkedIn" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:af2007andersonflores@gmail.com" aria-label="Email" class="social-btn"><i
+                class="fa-solid fa-envelope"></i></a>
+            <button class="social-btn copy-email" id="copyEmailBtn" aria-label="Copiar correo" title="Copiar correo"><i
+                class="fa-regular fa-copy"></i></button>
+            <span class="hero-email mono">af2007andersonflores@gmail.com</span>
+          </div>
+          <div class="hero-meta reveal">
+            <div class="meta-item"><i class="fa-solid fa-location-dot"></i> Sonsonate, El Salvador</div>
+            <div class="meta-item"><i class="fa-solid fa-phone"></i> +503 7958 8735</div>
+            <div class="meta-item"><i class="fa-solid fa-language"></i> ES · EN Avanzado</div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-card glass">
+            <div class="profile-ring">
+              <div class="avatar">AS<span class="avatar-sub">dev</span></div>
+            </div>
+            <h3>Anderson Flores</h3>
+            <p class="mono profile-tag">software · data · iot</p>
+            <div class="profile-stats">
+              <div><strong>4+</strong><span>Proyectos</span></div>
+              <div><strong>UEES</strong><span>Universitario</span></div>
+              <div><strong>C1</strong><span>Inglés</span></div>
+            </div>
+            <div class="profile-chips">
+              <span class="chip mono"><i class="fa-solid fa-microchip"></i> ESP32-S3</span>
+              <span class="chip mono"><i class="fa-solid fa-database"></i> Full Stack</span>
+              <span class="chip mono"><i class="fa-solid fa-graduation-cap"></i> EdTech</span>
+            </div>
+            <!-- Foto real (opcional): coloca tu foto como profile.jpg en esta carpeta y descomenta la línea de abajo -->
+            <!-- <img src="profile.jpg" alt="Foto de Anderson Flores" class="profile-photo" /> -->
+          </div>
+          <div class="float-card fc1 glass mono"><i class="fa-solid fa-code"></i> clean_code.js</div>
+          <div class="float-card fc2 glass mono"><i class="fa-solid fa-signal"></i> realtime · IoT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS STRIP ============ -->
+    <section class="strip">
+      <div class="container strip-inner glass reveal">
+        <div class="strip-item"><i class="fa-solid fa-screwdriver-wrench"></i>
+          <div><strong>Enfoque práctico</strong><span>Hardware + Software</span></div>
+        </div>
+        <div class="strip-item"><i class="fa-solid fa-users"></i>
+          <div><strong>Trabajo en equipo</strong><span>Hackathones & colegio</span></div>
+        </div>
+        <div class="strip-item"><i class="fa-solid fa-bolt"></i>
+          <div><strong>Aprendizaje rápido</strong><span>Nuevas herramientas</span></div>
+        </div>
+        <div class="strip-item"><i class="fa-solid fa-earth-americas"></i>
+          <div><strong>Remoto ready</strong><span>Organización & compromiso</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HABILIDADES ============ -->
+    <section class="section container" id="habilidades">
+      <p class="section-kicker mono reveal">// 01 · tech-stack</p>
+      <h2 class="section-title reveal">Habilidades <span class="gradient-text">técnicas</span></h2>
+      <p class="section-sub reveal">Stack funcional y habilidades que aplico en cada proyecto, del prototipo IoT al
+        despliegue web.</p>
+
+      <div class="skills-grid">
+        <article class="card glass reveal">
+          <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Desarrollo & Sistemas</h3>
+          <p>Manejo de computadoras, plataformas digitales y fundamentos de desarrollo de software.</p>
+          <div class="chips">
+            <span class="chip mono">Web Dev</span><span class="chip mono">Inventarios / CRUD</span><span
+              class="chip mono">ESP32-S3</span><span class="chip mono">Sensores</span><span class="chip mono">Python
+              básico</span><span class="chip mono">C++ embebido</span>
+          </div>
+        </article>
+        <article class="card glass reveal">
+          <div class="card-icon violet"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Productividad Digital</h3>
+          <p>Organización de información y trabajo eficiente en la nube.</p>
+          <div class="chips">
+            <span class="chip mono"><i class="fa-brands fa-microsoft"></i> Word</span><span class="chip mono"><i
+                class="fa-solid fa-table"></i> Excel básico</span><span class="chip mono"><i
+                class="fa-brands fa-google"></i> Workspace</span><span class="chip mono">Redes sociales</span><span
+              class="chip mono">Gestión web</span>
+          </div>
+        </article>
+        <article class="card glass reveal">
+          <div class="card-icon cyan"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Habilidades blandas</h3>
+          <p>Lo que aporto a cualquier equipo desde el día uno.</p>
+          <ul class="soft-list">
+            <li><i class="fa-solid fa-check"></i> Comunicación clara y efectiva</li>
+            <li><i class="fa-solid fa-check"></i> Organización de información</li>
+            <li><i class="fa-solid fa-check"></i> Trabajo en equipo</li>
+            <li><i class="fa-solid fa-check"></i> Responsabilidad & proactividad</li>
+            <li><i class="fa-solid fa-check"></i> Aprendizaje rápido</li>
+          </ul>
+        </article>
+        <article class="card glass reveal">
+          <div class="card-icon green"><i class="fa-solid fa-language"></i></div>
+          <h3>Idiomas</h3>
+          <p>Comunicación lista para equipos internacionales y documentación técnica.</p>
+          <div class="lang">
+            <div><strong>Español</strong><span>Nativo</span></div>
+            <div class="bar"><span style="width:100%"></span></div>
+          </div>
+          <div class="lang">
+            <div><strong>English</strong><span>Avanzado · CETEC</span></div>
+            <div class="bar"><span style="width:85%"></span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section class="section container" id="proyectos">
+      <p class="section-kicker mono reveal">// 02 · selected-work</p>
+      <h2 class="section-title reveal">Proyectos <span class="gradient-text">destacados</span></h2>
+      <p class="section-sub reveal">Cada tarjeta es un caso de estudio: problema → solución → tecnología. Enlaces listos
+        para conectar.</p>
+
+      <div class="projects-grid">
+        <!-- Proyecto destacado / más reciente -->
+        <article class="project glass featured reveal">
+          <div class="project-top p4">
+            <div class="project-badges">
+              <span class="project-badge latest mono"><i class="fa-solid fa-sparkles"></i> Más reciente</span>
+              <span class="project-badge mono"><i class="fa-solid fa-calendar-check"></i> EdTech · Web App</span>
+            </div>
+            <div class="project-icon"><i class="fa-solid fa-book-open"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>StudySync OS — Organización académica</h3>
+            <p class="project-desc"><strong>Problema:</strong> materias, parciales y tareas dispersas en apuntes y
+              chats. <strong>Solución:</strong> app web que centraliza materias, parciales, tareas, ciclos y semanas
+              académicas en un solo lugar, con modo oscuro y claro.</p>
+            <div class="chips">
+              <span class="chip mono">TypeScript</span><span class="chip mono">HTML</span><span
+                class="chip mono">CSS</span><span class="chip mono">SPA</span><span class="chip mono">Vercel
+                Deploy</span>
+            </div>
+            <ul class="project-feats">
+              <li><i class="fa-solid fa-circle-check"></i> Gestión de materias, parciales y tareas</li>
+              <li><i class="fa-solid fa-circle-check"></i> Organización por ciclos y semanas académicas</li>
+              <li><i class="fa-solid fa-circle-check"></i> Desplegado y funcionando en Vercel</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://studysyncos.vercel.app/" target="_blank" rel="noopener" class="btn btn-sm btn-primary"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Demo en vivo</a>
+              <!-- PLACEHOLDER: https://github.com/tu-usuario/studysync-os (si no hay repo, dime y lo cambio por "Sin repositorio") -->
+              <a href="#" data-placeholder="github-studysync" class="btn btn-sm btn-ghost"><i
+                  class="fa-brands fa-github"></i> Código</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 1 -->
+        <article class="project glass reveal">
+          <div class="project-top p1">
+            <span class="project-badge mono"><i class="fa-solid fa-microchip"></i> Hardware + Software · IoT</span>
+            <div class="project-icon"><i class="fa-solid fa-hand"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>GloveTalk / Sign Connect</h3>
+            <p class="project-desc"><strong>Problema:</strong> barreras de comunicación con lenguaje de señas.
+              <strong>Solución:</strong> prototipo con guante sensorizado + ESP32-S3 que interpreta gestos y los traduce
+              en tiempo real.</p>
+            <div class="chips">
+              <span class="chip mono">IoT</span><span class="chip mono">ESP32-S3</span><span class="chip mono">Embedded
+                Systems</span><span class="chip mono">C++ / Python</span><span class="chip mono">Real-Time</span>
+            </div>
+            <ul class="project-feats">
+              <li><i class="fa-solid fa-circle-check"></i> Lectura de sensores y clasificación de gestos</li>
+              <li><i class="fa-solid fa-circle-check"></i> Traducción en tiempo real de bajo costo</li>
+              <li><i class="fa-solid fa-circle-check"></i> Prototipo presentado en bachillerato</li>
+            </ul>
+            <div class="project-actions">
+              <span class="chip mono no-code"><i class="fa-solid fa-microchip"></i> Sin repositorio</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="project glass reveal">
+          <div class="project-top p2">
+            <span class="project-badge mono"><i class="fa-solid fa-layer-group"></i> Full Stack · Web App</span>
+            <div class="project-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>Catálogos Web — Gestión de Inventario</h3>
+            <p class="project-desc"><strong>Problema:</strong> información de productos dispersa y difícil de
+              visualizar. <strong>Solución:</strong> sistema web para organizar productos e inventario con visualización
+              clara y gestión centralizada.</p>
+            <div class="chips">
+              <span class="chip mono">Full Stack</span><span class="chip mono">Web App</span><span
+                class="chip mono">Database</span><span class="chip mono">CRUD</span><span class="chip mono">UI
+                Responsive</span>
+            </div>
+            <ul class="project-feats">
+              <li><i class="fa-solid fa-circle-check"></i> Catálogo y búsqueda de productos</li>
+              <li><i class="fa-solid fa-circle-check"></i> Gestión de inventario y stock</li>
+              <li><i class="fa-solid fa-circle-check"></i> Interfaz adaptable móvil / desktop</li>
+            </ul>
+            <div class="project-actions">
+              <span class="chip mono no-code"><i class="fa-solid fa-database"></i> Sin repositorio</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="project glass reveal">
+          <div class="project-top p3">
+            <span class="project-badge mono"><i class="fa-solid fa-graduation-cap"></i> EdTech · Hackathon</span>
+            <div class="project-icon"><i class="fa-solid fa-school"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>Sistema de Gestión Escolar</h3>
+            <p class="project-desc"><strong>Problema:</strong> control manual de deméritos e incidencias.
+              <strong>Solución:</strong> plataforma con acceso por roles donde docentes registran incidencias y
+              estudiantes consultan su historial. Desarrollado en el Hackathon de Programación del Ministerio de
+              Educación (2025).</p>
+            <div class="chips">
+              <span class="chip mono">Software Engineering</span><span class="chip mono">Role-based Access</span><span
+                class="chip mono">Education Tech</span><span class="chip mono">Team Project</span>
+            </div>
+            <ul class="project-feats">
+              <li><i class="fa-solid fa-circle-check"></i> Roles docente / estudiante</li>
+              <li><i class="fa-solid fa-circle-check"></i> Registro y consulta de deméritos</li>
+              <li><i class="fa-solid fa-circle-check"></i> Hackathon de Programación · Ministerio de Educación (2025)
+              </li>
+            </ul>
+            <div class="project-actions">
+              <!-- PLACEHOLDER: https://github.com/tu-usuario/gestion-escolar -->
+              <a href="#" data-placeholder="github-hackathon" class="btn btn-sm btn-ghost"><i
+                  class="fa-brands fa-github"></i> Código</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="placeholders-note mono reveal"><i class="fa-solid fa-circle-info"></i> Para activar los botones: busca
+        <code>data-placeholder</code> en index.html o edita el objeto <code>PORTFOLIO_LINKS</code> en script.js</p>
+    </section>
+
+    <!-- ============ FORMACIÓN ============ -->
+    <section class="section container" id="formacion">
+      <p class="section-kicker mono reveal">// 03 · trayectoria</p>
+      <h2 class="section-title reveal">Formación & <span class="gradient-text">trayectoria</span></h2>
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-card glass">
+            <span class="mono tl-date">2026 — Actualidad</span>
+            <h3><i class="fa-solid fa-building-columns"></i> Universidad Evangélica de El Salvador</h3>
+            <p class="tl-degree">Ingeniería en Desarrollo de Software y Ciencia de Datos</p>
+            <p>Formación universitaria en ingeniería de software, datos y desarrollo de soluciones tecnológicas.</p>
+            <div class="chips"><span class="chip mono">Software Engineering</span><span class="chip mono">Data
+                Science</span></div>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-card glass">
+            <span class="mono tl-date">2023 — 2025</span>
+            <h3><i class="fa-solid fa-code"></i> Instituto Nacional de Sonzacate</h3>
+            <p class="tl-degree">Bachiller en Desarrollo de Software</p>
+            <p>Base técnica en programación y proyectos aplicados: GloveTalk, catálogos web y sistema escolar de
+              hackathon.</p>
+            <div class="chips"><span class="chip mono">Programming</span><span class="chip mono">IoT
+                Prototype</span><span class="chip mono">Web Systems</span></div>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-card glass">
+            <span class="mono tl-date">CETEC El Salvador</span>
+            <h3><i class="fa-solid fa-language"></i> Centro de Estudios Técnicos en Computación e Inglés</h3>
+            <p class="tl-degree">Inglés Avanzado</p>
+            <p>Comunicación avanzada en inglés para documentación técnica, equipos remotos y clientes internacionales.
+            </p>
+            <div class="chips"><span class="chip mono">English Advanced</span><span class="chip mono">Tech
+                Communication</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section container" id="contacto">
+      <p class="section-kicker mono reveal">// 04 · contacto</p>
+      <h2 class="section-title reveal">¿Construimos algo <span class="gradient-text">genial?</span></h2>
+      <p class="section-sub reveal">Respuesta rápida por correo o LinkedIn. También puedes usar el formulario — llega
+        como borrador a mi email.</p>
+      <div class="contact-grid">
+        <aside class="contact-info glass reveal">
+          <h3>Datos directos</h3>
+          <a class="info-row" href="mailto:af2007andersonflores@gmail.com"><span class="info-ic"><i
+                class="fa-solid fa-envelope"></i></span>
+            <div><strong>Email</strong><span class="mono">af2007andersonflores@gmail.com</span></div>
+          </a>
+          <a class="info-row" href="tel:+50379588735"><span class="info-ic"><i class="fa-solid fa-phone"></i></span>
+            <div><strong>Teléfono</strong><span class="mono">+503 7958 8735</span></div>
+          </a>
+          <div class="info-row"><span class="info-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <div><strong>Ubicación</strong><span>Urb. Lomas de San Antonio, Sonsonate, El Salvador</span></div>
+          </div>
+          <a class="info-row linkedin" href="https://www.linkedin.com/in/anderson-steven-flores-perez-cv/" target="_blank"
+            rel="noopener"><span class="info-ic"><i class="fa-brands fa-linkedin-in"></i></span>
+            <div><strong>LinkedIn</strong><span class="mono">/anderson-steven-flores-perez-cv</span></div><i
+              class="fa-solid fa-arrow-up-right-from-square go"></i>
+          </a>
+          <div class="info-availability"><span class="pulse-dot"></span> Disponible para prácticas, freelance y proyectos
+            junior</div>
+        </aside>
+      <form class="contact-form glass reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="fName">Nombre</label><input id="fName" name="name" type="text"
+              placeholder="Tu nombre" required /><small class="err"></small></div>
+          <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email"
+              placeholder="tu@correo.com" required /><small class="err"></small></div>
+        </div>
+        <div class="field"><label for="fSubject">Asunto</label><input id="fSubject" name="subject" type="text"
+            placeholder="Proyecto web, práctica, colaboración…" required /><small class="err"></small></div>
+        <div class="field"><label for="fMsg">Mensaje</label><textarea id="fMsg" name="message" rows="5"
+            placeholder="Cuéntame sobre tu idea, tiempos y objetivos…" required></textarea><small class="err"></small>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="sendBtn"><span class="btn-label">Enviar
+            mensaje</span> <i class="fa-solid fa-paper-plane"></i></button>
+        <p class="form-note mono">Sin backend: valida en JS y abre tu cliente de correo con el mensaje listo.</p>
+      </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo"><span class="logo-mark">A</span><span
+            class="logo-text">Anderson<em>.dev</em></span></a>
+        <p>Software Developer & Data Science Student — Sonsonate, El Salvador.</p>
+        <div class="hero-socials">
+          <a href="#" data-placeholder="github-profile" aria-label="GitHub" class="social-btn"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/anderson-steven-flores-perez-cv/" target="_blank" rel="noopener"
+            aria-label="LinkedIn" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:af2007andersonflores@gmail.com" aria-label="Email" class="social-btn"><i
+              class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <strong class="mono">Mapa</strong>
+        <a href="#habilidades">Habilidades</a><a href="#proyectos">Proyectos</a><a href="#formacion">Formación</a><a
+          href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-links">
+        <strong class="mono">Contacto</strong>
+        <a href="mailto:af2007andersonflores@gmail.com">af2007andersonflores@gmail.com</a>
+        <a href="tel:+50379588735">+503 7958 8735</a>
+        <span class="mono muted">Sonsonate, El Salvador</span>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© <span id="year"></span> Anderson Steven Flores Pérez. Todos los derechos reservados.</span>
+      <span class="mono muted">Diseñado & construido a mano · HTML + CSS + JS</span>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
