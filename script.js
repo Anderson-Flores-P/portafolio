@@ -32,7 +32,7 @@ function applyPlaceholders() {
       el.addEventListener("click", (e) => {
         if ((el.getAttribute("href") || "#") === "#") {
           e.preventDefault();
-          toast("Enlace pendiente — edita PORTFOLIO_LINKS en script.js");
+          toast("Enlace pendiente");
         }
       });
     }
