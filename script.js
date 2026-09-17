@@ -87,7 +87,7 @@ function initTyping() {
 /* 5. Scroll: progreso, header activo, to-top, reveal */
 function initScroll() {
   const bar = $("#scrollProgress"), toTop = $("#toTop");
-  const sections = ["inicio", "habilidades", "proyectos", "formacion", "contacto"]
+  const sections = ["inicio", "habilidades", "proyectos", "formacion", "participaciones", "contacto"]
     .map((id) => document.getElementById(id));
   const navMap = Object.fromEntries($$(".nav-link").map((a) => [a.getAttribute("href"), a]));
 
@@ -167,6 +167,66 @@ function initForm() {
   });
 }
 
+/* 9. Lightbox diplomas / participaciones */
+function initCertModal() {
+  const modal = $("#certModal");
+  if (!modal) return;
+  const img = $("#certModalImg");
+  const title = $("#certModalTitle");
+  const fallback = $("#certModalFallback");
+  const pathEl = $("#certModalPath");
+  const open = $("#certModalOpen");
+
+  const isPdf = (src) => /\.pdf(\?.*)?$/i.test(src || "");
+
+  function openCert(src, label) {
+    title.textContent = label || "Diploma";
+    fallback.hidden = true;
+    img.style.display = "";
+    if (isPdf(src)) {
+      // PDFs no se previsualizan como imagen: mostramos fallback + botones para abrir/descargar
+      img.style.display = "none";
+      fallback.hidden = false;
+      pathEl.textContent = src;
+    } else {
+      img.src = src;
+      img.alt = label || "Diploma ampliado";
+      img.onerror = () => {
+        img.style.display = "none";
+        fallback.hidden = false;
+        pathEl.textContent = src;
+      };
+    }
+    open.setAttribute("href", src);
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+  function closeCert() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    img.removeAttribute("src");
+  }
+
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest("[data-cert-src], .cert-view, .cert-preview");
+    if (trigger) {
+      const src = trigger.getAttribute("data-cert-src");
+      const label = trigger.getAttribute("data-cert-title") || "Diploma";
+      if (src) openCert(src, label);
+      return;
+    }
+    if (e.target.closest("[data-close-cert]") || e.target.closest("#certModalClose")) closeCert();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeCert();
+    if (e.key === "Enter" && e.target.classList?.contains("cert-preview")) {
+      openCert(e.target.getAttribute("data-cert-src"), e.target.getAttribute("data-cert-title"));
+    }
+  });
+}
+
 /* Toast */
 let toastTimer;
 function toast(msg) {
@@ -187,4 +247,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initCardGlow();
   initCopyEmail();
   initForm();
+  initCertModal();
 });
